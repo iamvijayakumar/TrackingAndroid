@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.customthemeactionbartab.MainActivity" >
+ <item
+                android:id="@+id/action_settings"
+                android:icon="@drawable/menu"
+                app:showAsAction="always">
+             <menu>
+            <item
+                android:id="@+id/action_blog"
+                android:orderInCategory="100"
+                android:title="Tracking History"
+                app:showAsAction="never"/>
+          
+        </menu>    
+     </item>
+   
+
+</menu>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    
+    <color name="speed_circle_background">#203229</color>
+    <color name="background">#355e4a</color>
+    <color name="white">#ffffff</color>
+     <color name="current_location_textcolor">#425c50</color>
+</resources>

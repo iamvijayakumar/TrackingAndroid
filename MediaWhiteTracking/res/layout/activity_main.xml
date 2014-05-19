@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.vehicle.mediawhitetracking"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.vehicle.mediawhitetracking.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="150dip"
+    android:layout_above="@+id/map"
+    android:layout_alignLeft="@+id/map"
+    android:layout_alignRight="@+id/map"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/view1"
+        android:layout_width="140dp"
+        android:layout_height="160dp"
+        android:background="@color/speed_circle_background" >
+         <com.vehicle.mediawhitetracking.HalfSeekabr
+            android:id="@+id/volume_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="false"
+            android:secondaryProgress="0"
+            
+            app:end_angle="270"
+            app:pointer_alpha_ontouch="100"
+            app:pointer_color="#0174DF"
+            app:pointer_halo_color="#880174DF"
+            app:start_angle="270"
+            app:use_custom_radii="true" />
+
+         <TextView
+             android:id="@+id/speed_textview"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/white"
+             android:textStyle="bold"
+             android:layout_centerHorizontal="true"
+             android:layout_centerVertical="true"
+            ></TextView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/gps" />
+
+    <TextView
+        android:id="@+id/text_currentlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/text_size"
+        android:layout_marginLeft="10dip"
+        android:textColor="@color/current_location_textcolor"
+        android:layout_toRightOf="@+id/view1"
+        android:singleLine="true"
+        android:text="@string/current_location" />
+</RelativeLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="356dp"
+        android:layout_height="340dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dip"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+</RelativeLayout>
